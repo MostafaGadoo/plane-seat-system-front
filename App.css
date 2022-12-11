@@ -1,0 +1,9 @@
+.Title h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    font-size: 70px;
+    font-family: 'Abril Fatface', cursive;
+    color:darkblue;
+  }
