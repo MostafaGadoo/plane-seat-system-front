@@ -4,7 +4,7 @@ import CardActions from '../../UI/card/CardActions';
 import CardBody from '../../UI/card/CardBody';
 import CardHeader from '../../UI/card/CardHeader';
 
-const ProductSummary = (props) => {
+const ViewAllTickets = (props) => {
   // use the navigate function provided by the useNavigate react router hook
   const navigate = useNavigate();
 
@@ -86,4 +86,4 @@ const editTicekt = async () => {
   );
   
 };
-export default ProductSummary;
+export default ViewAllTickets;

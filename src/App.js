@@ -10,7 +10,7 @@ import AddFlightPage from './pages/AddFlightPage';
 import MakeReportkPage from './pages/MakeReportPage';
 import AdminSigninPage from './pages/AdminSigninPage';
 import SiginForm from './components/auth/SigninForm';
-import ProductsPage from './pages/ProductsPage';
+import TicketsPage from './pages/TicketsPage';
 import FeedbackPage from './pages/FeedbackPage';
 import ComplaintsPage from './pages/ComplaintsPage';
 import ViewLuggagePage from './pages/ViewLuggagePage';
@@ -37,7 +37,7 @@ const App = () => {
             <Route path="/signin" element={<SigninPage />} />
             <Route path="/signinForm" element={<SiginForm />} />
             <Route path="/Asignin" element={<AdminSigninPage />} />
-            <Route path="/tickets" element={<ProductsPage />} />
+            <Route path="/tickets" element={<TicketsPage />} />
             <Route path="/Feedbakcs" element={<FeedbackPage />} />
             <Route path="/ViewComplaint" element={<ComplaintsPage />} />
             <Route path="/Luggage" element={<ViewLuggagePage />} />

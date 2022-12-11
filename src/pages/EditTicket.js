@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import ProductsList from '../components/products/ProductsList';
+import TicketsList from '../components/products/TicketsList';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import EditTicketForm from '../components/products/EditTicketForm';

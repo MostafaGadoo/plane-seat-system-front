@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import ProductsList from '../components/products/ProductsList';
+import TicketsList from '../components/products/TicketsList';
 
-const ProductsPage = () => {
+const TicketsPage = () => {
   // let's define a state for products
   const [products, setProducts] = useState([]);
 
@@ -50,9 +50,9 @@ const ProductsPage = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <ProductsList products={products} />
+      <TicketsList products={products} />
     </div>
   );
 };
 
-export default ProductsPage;
+export default TicketsPage;

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import ProductsList from '../components/products/ProductsList';
+import TicketsList from '../components/products/TicketsList';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
@@ -56,7 +56,7 @@ const CancelBooking = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <ProductsList products={products} />
+      <TicketsList products={products} />
     </div>
   );
 };

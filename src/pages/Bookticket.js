@@ -1,62 +1,5 @@
-// import { useEffect, useState } from 'react';
-// import { Navigate, useParams } from 'react-router-dom';
-
-// const Bookticket = () => {
-//   // let's define a state for products
-  
-
-//   // let's define a state for loading
-//   const [isLoading, setIsLoading] = useState(true);
-//   const params = useParams();
-//   const ticketId = params.ticketId;
-
-//   useEffect(() => {
-//     const fetchAbortController = new AbortController();
-//     // const fetchSignal = fetchAbortController.signal; 
-
-   
-//     const Bookticket = async() => {
-//         console.log(ticketId);
-//     try{
-//         const response = await fetch('http://localhost:3000/tickets/bookticket/'+ ticketId,{ 
-//             method:'PUT',
-//             // signal: fetchSignal,
-//         });
-
-//         const data = await response.json();
-
-//         if(!response.ok){
-//             throw Error(data.error);
-//         }
-//         Navigate(`/`);
-//         setIsLoading(false);
-//         // showPopUp();
-//         console.log("done");
-
-//     }catch(err){
-//         console.log(err.message);
-//         alert("Cannot update status");
-//     }
-// }
-
-// Bookticket();
-
-//     return () => {
-//       fetchAbortController.abort();
-//     };
-//   }, []);
-
-//   if (isLoading) {
-//     return <p>Please wait while we are loading data...</p>;
-//   }
-//   return <div>
-
-//   </div>
-// };
-
-// export default Bookticket;
 import { useEffect, useState } from 'react';
-import ProductsList from '../components/products/ProductsList';
+import TicketsList from '../components/products/TicketsList';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
@@ -113,7 +56,7 @@ const Bookticket = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <ProductsList products={products} />
+      <TicketsList products={products} />
     </div>
   );
 };
