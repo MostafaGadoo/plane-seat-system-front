@@ -1,15 +1,21 @@
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import FormInputError from '../../UI/form/FormInputError';
+import CardBody from '../../UI/card/CardBody';
 import TextInput from '../../UI/form/TextInput';
+
 
 const FeedbackForm = () => {
   const { register, handleSubmit, formState } = useForm();
   const navigate = useNavigate();
 
+  const params = useParams();
+  const ticketID = params.ticketId;
+
   const submitHandler = async (formData) => {
     try {
-      const response = await fetch('http://localhost:3000/Complaints', {
+      const response = await fetch(`http://localhost:3000/Complaints`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -43,6 +49,7 @@ const FeedbackForm = () => {
         label="Description"
         type="text"
         name="description"
+        value = {ticketID} 
         register={register}
         validation={{ required: true }}
       />
@@ -71,16 +78,15 @@ const FeedbackForm = () => {
       )}
 
     
-      <TextInput
-        label="Ticket_id"
-        type="text"
-        name="Ticket_id"
-        register={register}
-        validation={{ required: true }}
-      />
-      {formState.errors.Ticket_id && (
-        <FormInputError>Ticket_id must not be empty.</FormInputError>
-      )}
+      <label>
+            Ticket Id:
+            <input
+              name="Ticket_id"
+              type="text"
+              value={ticketID}
+            />
+          </label>
+      
        <TextInput
         label="Customer_id"
         type="text"

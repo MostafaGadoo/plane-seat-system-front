@@ -20,6 +20,7 @@ import UpgradeTicket from './pages/UpgradeTicket';
 import CancelBooking from './pages/CancelBooking';
 import EditTicket from './pages/EditTicket';
 import EditFlight from './pages/EditFlight';
+import Logout from './pages/Logout';
 
 const App = () => {
   return (
@@ -28,9 +29,10 @@ const App = () => {
       <BrowserRouter>
         <Layout>
           <Routes>
+            <Route path="/logout" element={<Logout />} />
             <Route path="/" element={<HomePage />} />
             <Route path="/Feedback" element={<AddFeedbackPage />} />
-            <Route path="/Complaints" element={<ComplaintPage />} />
+            <Route path="/Complaints/:ticketId" element={<ComplaintPage />} />
             <Route path="/Flights" element={<AddFlightPage />} />
             <Route path="/Reports" element={<MakeReportkPage />} />
             <Route path="/signup" element={<SignupPage />} />

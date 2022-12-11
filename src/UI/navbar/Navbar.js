@@ -31,11 +31,12 @@ const Navbar = () => {
        
         {authContext.type=="Customer" &&  <NavItem to="/Feedback">Feedback</NavItem> }
         {authContext.type=="Customer" &&  <NavItem to="/tickets">Tickets</NavItem> }
-        {authContext.type=="Customer" &&   <NavItem to="/Complaints">Complaint</NavItem> }
+        {/* {authContext.type=="Customer" &&   <NavItem to="/Complaints">Complaint</NavItem> } */}
         
         {authContext.type=="Customer" &&  <NavItem to="/Reports">MakeReport</NavItem> }
         {!authContext.token && <NavItem to="/signin">Sign In</NavItem>}
         {!authContext.token && <NavItem to="/signup">Sign Up</NavItem>}
+        {authContext.token && <NavItem to="/logout">Logout</NavItem>}
       </ul>
     </div>
   </div>

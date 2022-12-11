@@ -36,10 +36,15 @@ const EditFlightForm = () => {
   };
 
   return (
+ <div class="edit">
     <form
-      className="flex  flex-col p-10 gap-5 bg-gray-800 w-fit"
+      
       onSubmit={handleSubmit(submitHandler)}
     >
+      <div class='sign-in'>
+      <div class="format">
+      <h2 class='Edit'>Edit Flight</h2>
+      <div class="content">
       <TextInput
         label="Date"
         type="text"
@@ -48,7 +53,7 @@ const EditFlightForm = () => {
         validation={{ required: true }}
       />
       {formState.errors.date && (
-        <FormInputError>Product name must not be empty</FormInputError>
+        <FormInputError>Date name must not be empty</FormInputError>
       )}
 
       <TextInput
@@ -59,17 +64,24 @@ const EditFlightForm = () => {
         validation={{ required: true }}
       />
       {formState.errors.departureTime && (
-        <FormInputError>Product description must not be empty</FormInputError>
+        <FormInputError>departureTime must not be empty</FormInputError>
       )}
 
     
       <button
         type="submit"
-        className="bg-white rounded-xl my-4 py-2 px-8 self-center"
+        className="button"
       >
-        Edit Ticket
+        Edit Flight
       </button>
+      </div>
+      </div>
+      <img src="https://i.pinimg.com/564x/dd/c6/94/ddc694ffa2622934f5d5dfcbec51ee97.jpg" class="Edit-photo"></img>
+      
+      </div>
+
     </form>
+    </div>
   );
 };
 

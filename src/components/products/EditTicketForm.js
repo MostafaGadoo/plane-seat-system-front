@@ -36,10 +36,14 @@ const EditTicketForm = () => {
   };
 
   return (
+    <div class="editT">
     <form
-      className="flex  flex-col p-10 gap-5 bg-gray-800 w-fit"
       onSubmit={handleSubmit(submitHandler)}
     >
+      <div class='sign-in'>
+      <div class="format">
+      <h2 class='Edit'>Edit Ticket</h2>
+      <div class="content">
       <TextInput
         label="Date"
         type="text"
@@ -65,11 +69,18 @@ const EditTicketForm = () => {
     
       <button
         type="submit"
-        className="bg-white rounded-xl my-4 py-2 px-8 self-center"
+        className="button"
       >
         Edit Ticket
       </button>
+      </div>
+      </div>
+      <img src="https://i.pinimg.com/564x/85/a9/70/85a9701d57194c7ccfb7577592e201ec.jpg" class="EditT-photo"></img>
+      
+      </div>
+
     </form>
+    </div>
   );
 };
 

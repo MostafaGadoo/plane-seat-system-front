@@ -348,6 +348,73 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.Edit{
+  font-size: 42px;
+  font-family: 'Times New Roman', Times, serif;
+  color: cadetblue;
+  text-align: left;
+  padding-right: 42px;
+  padding-bottom: 35px;
+  margin-left: 21px;
+}
+.Edit-photo{
+  width: 54%;
+  height: 86vh;
+  margin-bottom: 63px;
+  padding-right: -13px;
+  border-radius: 10px;
+  display: flex;
+  align-self: end;
+}
+.EditT-photo{
+  width: 52%;
+  height: 86vh;
+  margin-bottom: 63px;
+  padding-right: -13px;
+  border-radius: 10px;
+  display: flex;
+  align-self: end;
+}
+.editT form{
+  margin-left: 200px;
+    padding-left: 70px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    width: 71%;
+    background-color: aliceblue;
+    height: 87vh;
+    border: 3px solid #FAF9F6;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 3px grey;
+}
+.edit form{
+  margin-left: 45px;
+  padding-left: 70px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  width: 95%;
+  background-color: aliceblue;
+  height: 87vh;
+  border: 3px solid #FAF9F6;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px 3px gray;
+}
+.cardButton1{
+  background-color: lightseagreen;
+  color: white;
+  padding: 20px;
+  font-size: 22px;
+  border-radius: 10px;
+  margin: 0px 5px;
+}
+.cardButton2{
+  background-color: lightseagreen;
+  color: white;
+  padding: 20px;
+  font-size: 22px;
+  border-radius: 10px;
+  margin: 0px 5px;
+}
 
 @tailwind base;
 @tailwind components;

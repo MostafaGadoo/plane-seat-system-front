@@ -1,3 +1,4 @@
+import { data } from 'autoprefixer';
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
@@ -29,10 +30,11 @@ const SigninForm = () => {
       } 
 
       // invoke the login function in our auth context
-      authContext.login(data.userId, data.username, data.jwt,data.type);
+      authContext.login(data._id, data.username, data.jwt,data.type);
 
+      const CustomerID = data.Customer;
       // navigate to the home page
-      navigate(`/${data.type}`);
+      navigate(`/`);
     } catch (err) {
       console.log(err.message);
     }

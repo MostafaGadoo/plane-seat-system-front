@@ -1,12 +1,21 @@
 import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Card from '../../UI/card/Card';
 import CardActions from '../../UI/card/CardActions';
 import CardBody from '../../UI/card/CardBody';
 import CardHeader from '../../UI/card/CardHeader';
+import SigninForm from '../../components/auth/SigninForm';
+import AuthContext from '../../store/authContext';
 
 const ViewAllTickets = (props) => {
   // use the navigate function provided by the useNavigate react router hook
   const navigate = useNavigate();
+  const params = useParams();
+  const customerId = AuthContext.CustomerID;;
+  
+  
+
+  console.log(customerId);
 
   const updateStatusHandler = async () => {
     //navigate(`/Viewpropertiesup/${props.product._id}`);
@@ -23,7 +32,7 @@ const cancelTicekt = async () => {
 }; 
 const editTicekt = async () => {
     //navigate(`/Viewpropertiesup/${props.product._id}`);
-    navigate(`/editbooking/${props.product._id}`);
+    navigate(`/Complaints/${props.product._id}`);
 }; 
   return (
     <Card>
@@ -77,7 +86,7 @@ const editTicekt = async () => {
           class ="cardButton"
           onClick={editTicekt}
         >
-          Edit
+          Complain
         </button>
       </CardActions>
     </Card>
