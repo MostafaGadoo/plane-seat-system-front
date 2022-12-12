@@ -13,7 +13,7 @@ const EditFlightForm = () => {
 
   const submitHandler = async (formData) => {
     try {
-      const response = await fetch(`http://localhost:3000/Flights/${flightID}` , {
+      const response = await fetch(`https://plane-management.azurewebsites.netFlights/${flightID}` , {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

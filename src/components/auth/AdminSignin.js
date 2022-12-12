@@ -14,7 +14,7 @@ const AdminSignin = () => {
 
   const submitHandler = async (formData) => {
     try {
-      const response = await fetch('http://localhost:3000/Admins/signin', {
+      const response = await fetch('https://plane-management.azurewebsites.netAdmins/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

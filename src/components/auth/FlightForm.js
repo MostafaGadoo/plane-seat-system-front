@@ -9,7 +9,7 @@ const FlightForm = () => {
 
   const submitHandler = async (formData) => {
     try {
-      const response = await fetch('http://localhost:3000/Flights', {
+      const response = await fetch('https://plane-management.azurewebsites.netFlights', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

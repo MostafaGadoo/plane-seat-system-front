@@ -15,7 +15,7 @@ const FeedbackPage = () => {
     const fetchProducts = async () => {
       try {
         // send an HTTP GET request to the get products route we defined in our Express REST API
-        const response = await fetch('http://localhost:3000/Feedbacks', {
+        const response = await fetch('https://plane-management.azurewebsites.netFeedbacks', {
           signal: fetchSignal
         });
         // parse the response content to JSON and store it into data variable

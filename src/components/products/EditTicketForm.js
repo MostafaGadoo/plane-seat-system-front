@@ -13,7 +13,7 @@ const EditTicketForm = () => {
 
   const submitHandler = async (formData) => {
     try {
-      const response = await fetch(`http://localhost:3000/tickets/editticket/${ticketID}` , {
+      const response = await fetch(`https://plane-management.azurewebsites.nettickets/editticket/${ticketID}` , {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
