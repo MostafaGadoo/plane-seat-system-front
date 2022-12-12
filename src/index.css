@@ -293,18 +293,18 @@ box-shadow: 3px 3px 3px 3px gray;
   align-items: flex-end
 }
 
-.homeMainDiv{
+/* .homeMainDiv{
   background-color: #2d67b1;
   width: 80%;
   height: 500px;
   position: fixed;
   top: 100px;
   right: 30px;
-}
+} */
 
 .homeMainDiv .homeMainDivHeader{
   font-size: 40px;
-  color: white;
+  color: #111827;
   margin: 20px 30px;
   font-weight: bold;
 }

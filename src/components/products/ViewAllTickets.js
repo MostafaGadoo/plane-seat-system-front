@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import React, { useContext } from 'react';
 import Card from '../../UI/card/Card';
 import CardActions from '../../UI/card/CardActions';
 import CardBody from '../../UI/card/CardBody';
@@ -11,9 +12,10 @@ const ViewAllTickets = (props) => {
   // use the navigate function provided by the useNavigate react router hook
   const navigate = useNavigate();
   const params = useParams();
-  const customerId = AuthContext.CustomerID;;
+  // const customerId = AuthContext.CustomerID;;
   
-  
+  const authContext = useContext(AuthContext);
+  const customerId = authContext.id;
 
   console.log(customerId);
 

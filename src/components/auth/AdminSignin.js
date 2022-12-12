@@ -32,7 +32,7 @@ const AdminSignin = () => {
       authContext.login(data.userId, data.username, data.jwt,data.type);
 
       // navigate to the home page
-      navigate("/");
+      navigate("/Feedbakcs");
     } catch (err) {
       console.log(err.message);
     }

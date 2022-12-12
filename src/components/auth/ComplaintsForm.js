@@ -4,11 +4,16 @@ import { useParams } from 'react-router-dom';
 import FormInputError from '../../UI/form/FormInputError';
 import CardBody from '../../UI/card/CardBody';
 import TextInput from '../../UI/form/TextInput';
+import AuthContext from '../../store/authContext';
+// import AuthProvider from '../../store/AuthProvider';
+import React, { useContext } from 'react';
 
 
 const FeedbackForm = () => {
   const { register, handleSubmit, formState } = useForm();
   const navigate = useNavigate();
+  const authContext = useContext(AuthContext);
+  const customerId = authContext.id;
 
   const params = useParams();
   const ticketID = params.ticketId;
@@ -53,7 +58,7 @@ const FeedbackForm = () => {
         register={register}
         validation={{ required: true }}
       />
-      {formState.errors.Description && (
+      {formState.errors.name && (
         <FormInputError>Description must not be empty</FormInputError>
       )}
       <TextInput
@@ -63,7 +68,7 @@ const FeedbackForm = () => {
         register={register}
         validation={{ required: true }}
       />
-      {formState.errors.Date && (
+      {formState.errors.name && (
         <FormInputError>Date must not be empty</FormInputError>
       )}
       <TextInput
@@ -75,28 +80,40 @@ const FeedbackForm = () => {
       />
        {formState.errors.email && (
         <FormInputError>Email must not be empty</FormInputError>
+      )} 
+
+      <TextInput
+        label="Ticket_id"
+        type="text"
+        name="Ticket_id"
+        register={register}
+        validation={{ required: true }}
+      />
+       {formState.errors.email && (
+        <FormInputError>Email must not be empty</FormInputError>
       )}
 
     
-      <label>
+      {/* <label>
             Ticket Id:
             <input
               name="Ticket_id"
               type="text"
-              value={ticketID}
+              value={ticketID.toString()}
             />
           </label>
-      
+       */}
        <TextInput
-        label="Customer_id"
+        label="User Name"
         type="text"
-        name="Customer_id"
+        name="userName"
         register={register}
         validation={{ required: true }}
       />
-      {formState.errors.password && (
+      {formState.errors.name && (
         <FormInputError>Customer_id must not be empty.</FormInputError>
       )}
+      
       <button
         type="submit"
         class="button"

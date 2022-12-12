@@ -21,20 +21,20 @@ const SigninButtons = () => {
    };
 
   return (
-    <CardActions>
+   <div>
     <button
-      class ="cardButton"
+      class ="cardButton1"
       onClick={submitHandler}
     >
      User 
     </button>
     <button
-      class ="cardButton"
+      class ="cardButton2"
       onClick={submitHandler1}
     >
       Admin
     </button>
-  </CardActions>
+    </div>
   );
 };
 

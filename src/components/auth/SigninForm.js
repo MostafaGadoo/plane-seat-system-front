@@ -34,7 +34,7 @@ const SigninForm = () => {
 
       const CustomerID = data.Customer;
       // navigate to the home page
-      navigate(`/`);
+      navigate(`/tickets`);
     } catch (err) {
       console.log(err.message);
     }
