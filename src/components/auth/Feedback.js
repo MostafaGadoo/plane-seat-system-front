@@ -9,7 +9,7 @@ const FeedbackForm = () => {
 
   const submitHandler = async (formData) => {
     try {
-      const response = await fetch('https://plane-management.azurewebsites.netFeedbacks', {
+      const response = await fetch('https://plane-management.azurewebsites.net/Feedbacks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

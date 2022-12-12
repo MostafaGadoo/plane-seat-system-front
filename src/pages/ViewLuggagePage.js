@@ -15,7 +15,7 @@ const ViewLuggagePage = () => {
     const fetchProducts = async () => {
       try {
         // send an HTTP GET request to the get products route we defined in our Express REST API
-        const response = await fetch('https://plane-management.azurewebsites.netReports', {
+        const response = await fetch('https://plane-management.azurewebsites.net/Reports', {
           signal: fetchSignal
         });
         // parse the response content to JSON and store it into data variable

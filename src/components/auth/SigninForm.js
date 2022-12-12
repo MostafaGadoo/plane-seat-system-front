@@ -15,7 +15,7 @@ const SigninForm = () => {
 
   const submitHandler = async (formData) => {
     try {
-      const response = await fetch('https://plane-management.azurewebsites.netauth/signin', {
+      const response = await fetch('https://plane-management.azurewebsites.net/auth/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

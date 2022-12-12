@@ -20,7 +20,7 @@
 //       try {
 //         // send an HTTP GET request to the get products route we defined in our Express REST API
 //         const response = await fetch(
-//           `https://plane-management.azurewebsites.nettickets/${ticketId}`,
+//           `https://plane-management.azurewebsites.net/tickets/${ticketId}`,
 //           {
 //             signal: fetchSignal
 //           }

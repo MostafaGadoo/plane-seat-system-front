@@ -15,7 +15,7 @@ const AddProductForm = (props) => {
 
   const submitHandler = async (formData) => {
     try {
-      const response = await fetch(' https://plane-management.azurewebsites.netFlights', {
+      const response = await fetch(' https://plane-management.azurewebsites.net/Flights', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

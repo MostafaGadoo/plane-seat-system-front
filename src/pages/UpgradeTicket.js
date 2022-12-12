@@ -20,7 +20,7 @@ const UpgradeTicket = () => {
     const fetchProducts = async () => {
       try {
         // send an HTTP GET request to the get products route we defined in our Express REST API
-        const response = await fetch('https://plane-management.azurewebsites.nettickets/upgradeticket/' + ticketId,  {
+        const response = await fetch('https://plane-management.azurewebsites.net/tickets/upgradeticket/' + ticketId,  {
           method:'PUT',
           signal: fetchSignal
         });

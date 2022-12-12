@@ -20,7 +20,7 @@ const CancelBooking = () => {
     const fetchProducts = async () => {
       try {
         // send an HTTP GET request to the get products route we defined in our Express REST API
-        const response = await fetch('https://plane-management.azurewebsites.nettickets/cancelreservation/' + ticketId,  {
+        const response = await fetch('https://plane-management.azurewebsites.net/tickets/cancelreservation/' + ticketId,  {
           method:'PUT',
           signal: fetchSignal
         });

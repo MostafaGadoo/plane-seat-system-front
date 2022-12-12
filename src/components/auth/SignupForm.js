@@ -9,7 +9,7 @@ const SignupForm = () => {
 
   const submitHandler = async (formData) => {
     try {
-      const response = await fetch('https://plane-management.azurewebsites.netauth/signup', {
+      const response = await fetch('https://plane-management.azurewebsites.net/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
